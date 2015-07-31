@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="salesman.master.cs" Inherits="salesman" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div align="center">
+       <table style="width: 582px; position: static; height: 100px">
+            <tr>
+                <td>
+                    <asp:AdRotator ID="AdRotator1" runat="server" AdvertisementFile="~/ads/XMLFile.xml"
+                        Height="100px" Style="position: static" Width="700px" />
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 33px">
+                    <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2"
+                        Font-Bold="True" Font-Names="Imprint MT Shadow" Font-Size="12pt" ForeColor="#284E98"
+                        Height="25px" Orientation="Horizontal" StaticSubMenuIndent="10px" Style="position: static"
+                        Width="661px">
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <DynamicMenuStyle BackColor="#B5C7DE" />
+                        <StaticSelectedStyle BackColor="#507CD1" />
+                        <DynamicSelectedStyle BackColor="#507CD1" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <Items>
+                            <asp:MenuItem Text="Customer Product Details" Value="New Item" 
+                                NavigateUrl="~/salesman/Customers.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Home.aspx" Text="LogOut" Value="LogOut"></asp:MenuItem>
+                        </Items>
+                        <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                    </asp:Menu>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Home.aspx" title="Home"  description="This is startup page">
+        <siteMapNode url="~/Contactus.aspx" title="ContactUs"  description="This is contactus page" />
+        <siteMapNode url="~/PaymentMode.aspx" title="Payments"  description="This payments details page" />
+      <siteMapNode url="~/adminlogin.aspx" title="AdminLogin" description="This Admin Login page"></siteMapNode>
+      <siteMapNode url="~/UserLogin.aspx" title="UserLogin" description="This User Login page"></siteMapNode>
+      <siteMapNode title="Products">
+        <siteMapNode url="~/user/apprals.aspx" title="Apprals"></siteMapNode>
+        <siteMapNode url="~/user/cosmetics.aspx" title="Cosmetics"></siteMapNode>
+        <siteMapNode url="~/user/electronics.aspx" title="Electronics"></siteMapNode>
+        <siteMapNode url="~/user/equipments.aspx" title="Equipments"></siteMapNode>
+        <siteMapNode url="~/user/shoes.aspx" title="Shoes"></siteMapNode>
+        <siteMapNode url="~/user/viewdetails.aspx" title="ViewDetails"></siteMapNode>
+        <siteMapNode url="~/user/viewfullimage.aspx" title="ViewFullImage"></siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+</siteMap>

@@ -1,0 +1,67 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+    
+    <script type="text/javascript">
+history.forward();
+    
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div align="center">
+        <div style="text-align: center">
+            <table style="width: 582px; position: static; height: 100px">
+                <tr>
+                    <td colspan="3">
+                        <asp:AdRotator ID="AdRotator1" runat="server" AdvertisementFile="~/ads/XMLFile.xml"
+                            Height="100px" Style="position: static" Width="700px" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="height: 33px">
+                        <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2"
+                            Font-Bold="True" Font-Names="Imprint MT Shadow" Font-Size="12pt" ForeColor="#284E98" Orientation="Horizontal"
+                            StaticSubMenuIndent="10px" Style="position: static" Width="661px" Height="25px">
+                            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                            <DynamicMenuStyle BackColor="#B5C7DE" />
+                            <StaticSelectedStyle BackColor="#507CD1" />
+                            <DynamicSelectedStyle BackColor="#507CD1" />
+                            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/Admin/Welcome.aspx" Text="Welcome" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/AddItemType.aspx" Text="AddItemType" Value="New Item">
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="AddItems" Value="AddItems" NavigateUrl="~/Admin/AddItems.aspx"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/AddItemDetails.aspx" Text="AddItemDetails" Value="AddItemDetails">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/productdetails.aspx" Text="ProductDetails" Value="ProductDetails">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/addsalesman.aspx" Text="Add Salesman" 
+                                    Value="Add Salesman">
+                                    <asp:MenuItem NavigateUrl="~/Admin/view salesmandetails.aspx" 
+                                        Text="Manage Salesman" Value="Manage Salesman"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Home.aspx" Text="LogOut" Value="LogOut"></asp:MenuItem>
+                            </Items>
+                            <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                        </asp:Menu>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
